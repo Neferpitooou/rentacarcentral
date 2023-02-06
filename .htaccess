@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^rentacarcentral\.gc0de\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.rentacarcentral\.gc0de\.com$
+RewriteRule ^/?$ "https\:\/\/rentacarcentral\.gc0de\.com\/" [R=301,L]
+
